@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#2563eb">
+    <title>Game Dashboard</title>
+    <meta name="description" content="Game Dashboard">
+    <meta name="author" content="Ido Aizenshtein"/>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+</head>
+<body>
+<nav>
+    <div class="nav-links">
+        <a href="/" class="nav-link" data-route="home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="/leaderboard" class="nav-link" data-route="leaderboard">
+            <span class="nav-icon">🏆</span>
+            <span class="nav-text">Leaderboard</span>
+        </a>
+        <a href="/market" class="nav-link" data-route="market">
+            <span class="nav-icon">🛍️</span>
+            <span class="nav-text">Market</span>
+        </a>
+    </div>
+</nav>
+
+
+<div id="offline-banner" class="offline-banner hidden">
+    <span class="offline-icon">📡</span>
+    You are currently offline. Showing cached data.
+</div>
+
+<main id="app"></main>
+
+<!-- Load views -->
+<script src="/js/views/homeView.js" defer></script>
+<script src="/js/views/leaderboardView.js" defer></script>
+<script src="/js/views/marketView.js" defer></script>
+
+<!-- Core functionality -->
+<script src="/js/store.js" defer></script>
+<script src="/js/router.js" defer></script>
+<script src="/js/app.js" defer></script>
+</body>
+</html>
